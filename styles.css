@@ -1,0 +1,172 @@
+@font-face {
+  font-family: "Cansu-Bold";
+  src: url(fonts/Cansu-Bold.otf);
+}
+
+@font-face {
+  font-family: "Cansu-Outline";
+  src: url(fonts/Cansu-Outline.otf);
+}
+
+@font-face {
+  font-family: "Cansu-Regular";
+  src: url(fonts/Cansu-Regular.otf);
+}
+
+* {
+  margin: 0;
+  font-family: "Cansu-Bold";
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 6fr;
+}
+
+header {
+  background-color: #7c8363;
+  padding: 3rem;
+  font-size: 3rem;
+  font-weight: 800;
+}
+
+header section {
+  max-width: 1080px;
+}
+
+section {
+  background-color: #edf4f2;
+  padding: 3rem;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+}
+
+.button-container button {
+  height: 50px;
+  width: 150px;
+  background-color: #edf4f2;
+  box-shadow: inset 0 0 0 0 #7c8363;
+  transition: ease-out 0.3s;
+  border: none;
+  font-size: 1rem;
+  border-radius: 20px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button-container > button:hover {
+  box-shadow: inset 150px 0 0 0 #7c8363;
+}
+
+img {
+  height: 30px;
+  width: 30px;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 25%; /* Could be more or less, depending on screen size */
+  height: 40%;
+  border-radius: 5%;
+}
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+form {
+  display: block;
+  height: 80%;
+  /* display: flex; */
+  /* align-content: space-between; */
+}
+
+fieldset {
+  border: none;
+  display: inline-flex;
+  justify-content: space-between;
+  width: 60%;
+}
+
+input:checked ~ .checkmark {
+  background-color: #31473a;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  padding-top: 30px;
+}
+
+.card {
+  display: grid;
+  justify-items: center;
+  border: #31473a 2px solid;
+  width: 200px;
+  height: 200px;
+  padding: 5px;
+}
+
+.read {
+  border: #31473a 2px solid;
+  width: 125px;
+  font-size: 25px;
+  background-color: #31473a;
+  border-radius: 7px;
+}
+
+.not-read {
+  border: #7c8363 2px solid;
+  width: 125px;
+  font-size: 25px;
+  background-color: #7c8363;
+  border-radius: 7px;
+}
+
+p {
+  justify-self: left;
+}
+
+.remove-btn {
+  justify-self: right;
+  border-radius: 7px;
+  border: none;
+  height: 15px;
+}
