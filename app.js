@@ -1,13 +1,56 @@
-const { doc } = require("prettier");
+// const { doc } = require("prettier");
 
 const myLibrary = [];
 
-function Book(title, author, pages, hasRead, index) {
-  this.title = title;
-  this.author = author;
-  this.pages = pages;
-  this.hasRead = hasRead;
-  this.index = index;
+class Book {
+  constructor(title, author, pages, hasRead, index) {
+    this._title = title;
+    this._author = author;
+    this._pages = pages;
+    this._hasRead = hasRead;
+    this._index = index;
+  }
+
+  get title() {
+    return this._title;
+  }
+
+  set title(title) {
+    this._title = title;
+  }
+
+  get author() {
+    return this._author; 
+  }
+
+  set author(author) {
+    this._author = author;
+  }
+
+  get pages() {
+    return this._pages;
+  }
+
+  set pages(pages) {
+    this._pages = pages;
+  }
+
+  get hasRead() {
+    return this._hasRead;
+  }
+
+  set hasRead(hasRead) {
+    this._hasRead = hasRead;
+  }
+
+  get index() {
+    return this._index;
+  }
+
+  set index(index) {
+    this._index = index;
+  }
+
 }
 
 const cardContainer = document.getElementsByClassName("card-container")[0];
